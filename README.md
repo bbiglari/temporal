@@ -3,11 +3,11 @@ this is a simple project to build and develop CI/CD pipeline for any size compan
 In this sample project, I created a workflow definition with some activities to automatically clone, build, test, and clean a sample java project automativally. 
 
 to see how this project works:
-1. clone this project
+1. clone this project ``` git clone https://github.com/bbiglari/temporal.git```
 2. unzip the git-project
 3. run the ``` gradle clean build ```
 4. get the path to the git-project
-   1. cd to git-project
+   1. run ``` cd git-project ```
    2. run ``` pwd ```
    3. save the path for step 8
 6. run temporal server ```temporal server start-dev```
