@@ -1,0 +1,32 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation libs.guava
+    implementation 'io.temporal:temporal-sdk:1.21.0'
+    implementation 'commons-cli:commons-cli:1.9.0'
+
+    testImplementation libs.junit.jupiter
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+application {
+    mainClass = 'cicd.App'
+}
+
+tasks.named('test') {
+
+    useJUnitPlatform()
+}
